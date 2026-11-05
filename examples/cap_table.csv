@@ -1,0 +1,6 @@
+class,type,shares,lp_per_share,lp_multiple,seniority,conversion_ratio,strike,issue_price
+Common,common,8000000,,,,,,
+Series Seed,preferred,2500000,0.80,1,1,1,,0.80
+Series A,preferred,4000000,2.50,1,2,1,,2.50
+Options @0.30,option,1200000,,,,,0.30,
+Options @0.65,option,800000,,,,,0.65,

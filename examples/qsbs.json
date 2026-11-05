@@ -1,0 +1,20 @@
+{
+  "issuer": {
+    "name": "Saltflat Robotics, Inc.",
+    "entity_type": "C-corp",
+    "domestic": true,
+    "industry": "industrial robotics software",
+    "active_business_pct": 0.91,
+    "gross_assets_at_issuance": 18000000
+  },
+  "lots": [
+    {"holder": "Founder A", "shares": 3000000, "acquired": "2019-06-01", "basis": 3000,
+     "original_issuance": true, "sale_date": "2026-09-30", "proceeds": 21000000},
+    {"holder": "Early Employee", "shares": 150000, "acquired": "2022-01-15", "basis": 22500,
+     "original_issuance": true, "sale_date": "2026-09-30", "proceeds": 1050000},
+    {"holder": "Series B Investor", "shares": 2000000, "acquired": "2025-08-01", "basis": 9000000,
+     "original_issuance": true, "gross_assets_at_issuance": 62000000},
+    {"holder": "Secondary Buyer", "shares": 100000, "acquired": "2020-03-01", "basis": 90000,
+     "original_issuance": false, "sale_date": "2026-09-30", "proceeds": 700000}
+  ]
+}

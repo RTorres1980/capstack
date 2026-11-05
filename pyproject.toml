@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "capstack"
+version = "0.1.0"
+description = "Auditable private-capital operations toolkit: 409A OPM backsolve, QSBS screening, capital calls and portfolio KPI checks with a tamper-evident audit ledger."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Robert Torres" }]
+dependencies = []
+
+[project.optional-dependencies]
+ai = ["anthropic>=0.40"]
+dev = ["pytest>=8"]
+
+[project.scripts]
+capstack = "capstack.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

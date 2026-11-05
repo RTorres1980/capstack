@@ -1,0 +1,21 @@
+name: ci
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ["3.10", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: pip install -e ".[dev]"
+      - run: pytest -q
+      - name: End-to-end demo with ledger verification
+        run: |
+          capstack 409a examples/cap_table.csv --anchor "Series A" --price 2.50 --years 3 --vol 0.55 --rate 0.039
+          capstack capital-call examples/lps.csv --amount 4250000 --excuse "Uinta Fund of Funds"
+          capstack audit verify --inputs
+          capstack audit replay 1
